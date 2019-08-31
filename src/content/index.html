@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -18,23 +19,81 @@
 
     <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
 
     <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+</head>
+
+<body>
+    <section>
+        <header class="header">
+            <img class="header__photo"></img>
+            <h1>
+                Welcome! My name is Damian Sikora and I'm a mobile developer. I'm a husband and a father. I'm interested in video games and IoT stuff.
+            </h1>
+            <h3>
+                You might be interested in checking the list of <a href="#skills">my skills</a>. Don't forget to hava a glimpse at <a href=#projects ">my projects</a>. I am open for new opportunities so if you have one  - <a href=#contact">contact me</a>.
+            </h3>
+
+            <a href="mailto:dsikora85@gmail.com">dsikora85@gmail.com</a>
+
+        </header>
+
+        <section class="skills">
+            <h1 id="skills" class="skills_header">My Skills</h1>
+            <section class="skill">
+                <h2 class="skill__header">Working knowladge</h2>
+                <ul class="skill__list">
+                    <li class="skill__listItem">Unity3D</li>
+                    <li class="skill__listItem">Xamarin</li>
+                    <li class="skill__listItem">Visual Studio</li>
+                    <li class="skill__listItem">GIT</li>
+                    <li class="skill__listItem">AR/VR</li>
+                </ul>
+
+                <h2 class="skill__header">Know something about</h2>
+                <ul class="skill__list">
+                    <li class="skill__listItem">Java</li>
+                    <li class="skill__listItem">ObjC</li>
+                    <li class="skill__listItem">shaders</li>
+                    <li class="skill__listItem">frontend</li>
+                </ul>
+
+                <h2 class="skill__header">Want to learn</h2>
+                <ul class="skill__list">
+                    <li class="skill__listItem">Flutter</li>
+                    <li class="skill__listItem">Kotlin</li>
+                    <li class="skill__listItem">Azure</li>
+                </ul>
+            </section>
+        </section>
+        <section id="projects" class="projects">
+            <article class="projects__header">
+                <h2>Recent projects</h2>
+                <p class="projects__headerDesc">
+                    I started my mobile developer path in 2010. Since then, I'ce built some projects. Here's the list of of things I've done so far.
+                </p>
+            </article>
+            <ul class="projects__list">
+
+            </ul>
+        </section>
+
+    </section>
+
+    <footer id="contact" class="footer">
+        <h2 class="contact__header">Contact me</h2>
+        <p class="contact__text">
+            I'm open for new projects. If you have one for me - we should talk!
+        </p>
+
+        <a class="contact__email" href="mailto:dsikora85@gmail.com">dsikora85@gmail.com</a>
+    </footer>
+
 
     <script src="js/main.js"></script>
-  </body>
+</body>
+
 </html>
