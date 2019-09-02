@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap&subset=latin-ext');
 html {
     box-sizing: border-box;
 }
@@ -10,4 +11,36 @@ html {
     box-sizing: inherit;
 }
 
-body {}
+body {
+    background: $bigStone;
+    color: $bigStone;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+}
+
+.whiteSection {
+    background: $catskillWhite;
+    margin: 16px;
+    padding-left: 128px;
+    padding-top: 128px;
+}
+
+.header {
+    max-width: 780px;
+    &__photo {
+        width: 120px;
+        height: 120px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 56px;
+    }
+    &__desc {
+        color: $shuttleGray;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 36px;
+    }
+    &email {}
+}
