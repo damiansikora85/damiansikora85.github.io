@@ -31,16 +31,19 @@ body {
     &__photo {
         width: 120px;
         height: 120px;
+        margin-left: 1rem;
     }
     &__title {
+        margin-left: 1rem;
         max-width: 780px;
         font-weight: 600;
         font-size: 2.5rem;
         line-height: 3.5rem;
-        margin: 2rem 0 1rem;
+        margin: 2rem 0 1rem 1rem;
         font-style: normal;
     }
     &__desc {
+        margin-left: 1rem;
         color: $shuttleGray;
         font-weight: 300;
         font-size: 1.25rem;
@@ -54,6 +57,7 @@ body {
         font-weight: 500;
     }
     &__email {
+        margin-left: 1rem;
         color: $azureRadiance;
         text-decoration: none;
         font-style: normal;
@@ -68,12 +72,14 @@ body {
     max-width: 1184px;
     margin: 0 auto;
     margin-top: 200px;
+    margin-bottom: 1rem;
     &__header {
         font-style: normal;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 2.25rem;
         line-height: 3rem;
         padding: 1rem 0;
+        margin-left: 1rem;
         border-bottom: 2px solid #E5E8E0;
     }
 }
@@ -82,6 +88,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 8rem 0;
+    margin-left: 1rem;
     &__header {
         font-style: normal;
         font-weight: 600;
@@ -96,6 +103,12 @@ body {
             background: $malachite;
             border-radius: 8px;
             margin-bottom: 1.5rem;
+            .skill-violet & {
+                background: $royalPurple;
+            }
+            .skill-blue & {
+                background: $mariner;
+            }
         }
     }
     &__list {
@@ -118,12 +131,116 @@ body {
             content: '';
             display: block;
             position: absolute;
-            width: 18px;
-            height: 18px;
+            width: 16px;
+            height: 16px;
             top: 10px;
             left: 0;
             background: url(../assets/img/greenTick.svg);
             mask-repeat: no-repeat;
+            .skill-violet & {
+                background: url(../assets/img/purpleTick.svg);
+            }
+            .skill-blue & {
+                background: url(../assets/img/blueTick.svg);
+            }
         }
+    }
+}
+
+.projects {
+    margin: 0 auto;
+    margin-top: 8rem;
+    max-width: 1184px;
+    &__head {
+        max-width: 580px;
+        margin-left: 1rem;
+    }
+    &__header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+    }
+    &__headerDesc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 36px;
+        color: $shuttleGray;
+    }
+    &__list {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        list-style: none;
+    }
+}
+
+.project {
+    padding: 3rem;
+    &__icon {}
+    &__title {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        color: $bigStone;
+    }
+    &__desc {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 32px;
+        color: $shuttleGray;
+    }
+    &__links {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    &__link {
+        text-decoration: none;
+        color: $azureRadiance;
+    }
+}
+
+.contact {
+    color: white;
+    margin: 8rem 8rem;
+    max-width: 580px;
+    &__header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 1rem;
+        &::before {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: $azureRadiance;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 36px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+        margin-top: 1.5rem;
+    }
+    &__listItem {
+        color: white;
+    }
+    &__email {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: $azureRadiance;
+        text-decoration: none;
+        border-bottom: 2px solid $azureRadiance;
     }
 }
