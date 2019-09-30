@@ -20,7 +20,7 @@ body {
 }
 
 .whiteSection {
-    background: $catskillWhite;
+    background: white;
     margin: 16px;
     padding-top: 128px;
 }
@@ -147,10 +147,14 @@ body {
     }
 }
 
-.projects {
-    margin: 0 auto;
-    margin-top: 8rem;
+.container {
     max-width: 1184px;
+    margin: 0 auto;
+}
+
+.projects {
+    padding: 8rem 0;
+    background: $catskillWhite;
     &__head {
         max-width: 580px;
         margin-left: 1rem;
@@ -161,6 +165,7 @@ body {
         font-size: 36px;
     }
     &__headerDesc {
+        max-width: 580px;
         font-style: normal;
         font-weight: 300;
         font-size: 20px;
@@ -168,15 +173,24 @@ body {
         color: $shuttleGray;
     }
     &__list {
+        padding: 0;
         margin-top: 4rem;
         display: grid;
+        column-gap: 1.5rem;
+        row-gap: 1.5rem;
         grid-template-columns: 1fr 1fr;
         list-style: none;
     }
 }
 
 .project {
-    padding: 3rem;
+    background: white;
+    box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
+    border-radius: 8px;
+    overflow: hidden;
+    &__container {
+        padding: 3rem;
+    }
     &__icon {}
     &__title {
         font-style: normal;
@@ -192,12 +206,40 @@ body {
         color: $shuttleGray;
     }
     &__links {
-        display: flex;
-        flex-direction: row-reverse;
+        background: $catskillWhite;
+        padding: 1rem 3rem;
+        text-align: right;
     }
     &__link {
         text-decoration: none;
         color: $azureRadiance;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        &+& {
+            margin-left: 50px;
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                height: 32px;
+                width: 2px;
+                background: #CBD2D9;
+                position: absolute;
+                left: -24px;
+            }
+        }
+        &::before {
+            content: '';
+            display: block;
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+            background: url(../assets/img/codeIcon.svg);
+        }
+        &--demo::before {
+            background: url(../assets/img/demoIcon.svg);
+        }
     }
 }
 

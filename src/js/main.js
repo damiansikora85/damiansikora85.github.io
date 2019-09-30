@@ -26,23 +26,20 @@ if (projectsList) {
     fetch('https://api.github.com/users/damiansikora85/repos')
         .then(response => response.json())
         .then(response => {
-            for (const repo of response) {
-                const { name, html_url, description } = repo;
-                projectsList.innerHTML +=
-                    `<li class="project">
-                <img src="../assets/img/githubIcon.svg" alt="github" class="project__icon " />
-                        <h2 class="project__title ">${name}</h2>
-                        <h3 class="project__desc ">${description}</h3>
+                for (const repo of response) {
+                    const { name, html_url, description } = repo;
+                    projectsList.innerHTML +=
+                        `<li class="project">
+                        <div class="project__container">
+                            <img src="../assets/img/githubIcon.svg" alt="github" class="project__icon " />
+                            <h2 class="project__title ">${name}</h2>
+                            ${
+                                description ? `<h3 class="project__desc ">${description}</h3>` : ''
+                              }    
+                        </div>
                         <section class="project__links">
-                            <a href=" " class="project__link">
-                                <img src=" " alt=" " />
-                                <h3>Demo</h3>
-                            </a>
-
-                            <a href=" " class="project__link">
-                                <img src=" " alt=" " />
-                                <h3>Code</h3>
-                            </a>
+                            <a href="${html_url}" class="project__link project__link--demo">Demo</a>
+                            <a href="${html_url}" class="project__link">Code</a>
                         </section>
                 </li>`
             }
