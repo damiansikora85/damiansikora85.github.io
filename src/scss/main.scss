@@ -4,6 +4,10 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 16px;
+    @media (max-width: $mobile) {
+        font-size: 12px;
+    }
 }
 
 *,
@@ -22,7 +26,10 @@ body {
 .whiteSection {
     background: white;
     margin: 16px;
-    padding-top: 128px;
+    padding-top: 8rem;
+    @media (max-width: $mobile) {
+        margin: 0;
+    }
 }
 
 .header {
@@ -71,24 +78,35 @@ body {
 .skills {
     max-width: 1184px;
     margin: 0 auto;
-    margin-top: 200px;
+    margin-top: 12.5rem;
     margin-bottom: 1rem;
+    @media (max-width: $mobile) {
+        margin-top: 5rem;
+    }
     &__header {
         font-style: normal;
         font-weight: 600;
         font-size: 2.25rem;
         line-height: 3rem;
         padding: 1rem 0;
+        margin-bottom: 8rem;
         margin-left: 1rem;
         border-bottom: 2px solid #E5E8E0;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
     }
 }
 
 .skill {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 8rem 0;
-    margin-left: 1rem;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    column-gap: .5rem;
+    @media (max-width: $mobile) {
+        grid-template-columns: 1fr;
+    }
     &__header {
         font-style: normal;
         font-weight: 600;
@@ -113,7 +131,7 @@ body {
     }
     &__list {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         list-style: none;
         padding: 0;
         margin-top: calc(1.5rem + 4px);
@@ -122,10 +140,10 @@ body {
     &__listItem {
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
+        font-size: 1.125rem;
         line-height: 40px;
         color: $shuttleGray;
-        padding-left: 30px;
+        padding-left: 1.875rem;
         position: relative;
         &::before {
             content: '';
@@ -153,7 +171,7 @@ body {
 }
 
 .projects {
-    padding: 8rem 0;
+    padding: 8rem 1rem;
     background: $catskillWhite;
     &__head {
         max-width: 580px;
@@ -162,14 +180,17 @@ body {
     &__header {
         font-style: normal;
         font-weight: 600;
-        font-size: 36px;
+        font-size: 2.25rem;
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
     }
     &__headerDesc {
         max-width: 580px;
         font-style: normal;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 36px;
+        font-size: 1.25rem;
+        line-height: 2.25rem;
         color: $shuttleGray;
     }
     &__list {
@@ -180,6 +201,9 @@ body {
         row-gap: 1.5rem;
         grid-template-columns: 1fr 1fr;
         list-style: none;
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        }
     }
 }
 
@@ -195,14 +219,14 @@ body {
     &__title {
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $bigStone;
     }
     &__desc {
         font-style: normal;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 1.125rem;
+        line-height: 2rem;
         color: $shuttleGray;
     }
     &__links {
@@ -250,7 +274,7 @@ body {
     &__header {
         font-style: normal;
         font-weight: 600;
-        font-size: 32px;
+        font-size: 2rem;
         margin-bottom: 1rem;
         &::before {
             content: '';
@@ -265,8 +289,8 @@ body {
     &__text {
         font-style: normal;
         font-weight: 300;
-        font-size: 20px;
-        line-height: 36px;
+        font-size: 1.25rem;
+        line-height: 2.25rem;
     }
     &__list {
         display: flex;
@@ -280,7 +304,7 @@ body {
     &__email {
         font-style: normal;
         font-weight: 500;
-        font-size: 20px;
+        font-size: 1.25rem;
         color: $azureRadiance;
         text-decoration: none;
         border-bottom: 2px solid $azureRadiance;
