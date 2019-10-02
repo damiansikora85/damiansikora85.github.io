@@ -50,13 +50,12 @@ body {
         font-style: normal;
     }
     &__desc {
-        margin-left: 1rem;
+        margin: 0 1rem 3.75rem 1rem;
         color: $shuttleGray;
         font-weight: 300;
         font-size: 1.25rem;
         font-style: normal;
         line-height: 2.25rem;
-        margin-bottom: 3.75rem;
         -webkit-font-smoothing: antialiased;
     }
     &__link {
@@ -212,6 +211,9 @@ body {
     box-shadow: 0px 6px 16px rgba(24, 41, 67, 0.09);
     border-radius: 8px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     &__container {
         padding: 3rem;
     }
@@ -269,8 +271,9 @@ body {
 
 .contact {
     color: white;
-    margin: 8rem 8rem;
-    max-width: 580px;
+    padding: 8rem 1rem;
+    margin: 0 auto;
+    max-width: 1184px;
     &__header {
         font-style: normal;
         font-weight: 600;
