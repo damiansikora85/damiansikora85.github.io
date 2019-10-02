@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Site title</title>
+    <title>Damian Sikora</title>
     <meta name="description" content="Description" />
 
     <!-- Title -->
@@ -16,25 +17,97 @@
     <!-- full url to the image with http(s) ie. https://maciejkorsan.github.io/my-repo/assets/img/fb.png. Facebook suggests at least 1200 x 630. -->
     <meta property="og:image" content="https://maciejkorsan.com/wtf-gulp-starter/assets/img/cover.png" />
 
-    <link rel="manifest" href="manifest.json" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link
-      rel="apple-touch-icon"
-      sizes="192x192"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <link rel="apple-touch-icon" sizes="192x192" href="assets/pwa/icons/icon-192x192.png" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      href="assets/pwa/icons/icon-192x192.png"
-    />
+    <link rel="icon" type="image/png" href="assets/pwa/icons/icon-192x192.png" />
 
     <link rel="stylesheet" href="css/main.css" />
-  </head>
-  <body>
-    <h1>Hello world - with simple PWA support!</h1>
+</head>
 
-    <script src="js/main.js"></script>
-  </body>
+<body>
+    <main>
+        <section class="whiteSection">
+            <header class="header">
+                <img src="assets/img/photo.png" class="header__photo" alt="Damian Sikora" />
+                <h1 class="header__title">
+                    Welcome👋 My name is Damian Sikora and I'm a mobile developer. I'm a husband and a father. I'm interested in video games and IoT stuff.
+                </h1>
+                <p class="header__desc">
+                    You might be interested in checking the list of <a href="#skills" class="header__link">my skills</a>. Don't forget to hava a glimpse at <a href="#projects" class="header__link">my projects</a>. I am open for new opportunities so if
+                    you have one - <a href=#contact class="header__link">contact me</a>😊.
+                </p>
+
+                <a href="mailto:dsikora85@gmail.com " class="header__email ">dsikora85@gmail.com</a>
+            </header>
+
+            <section id="skills" class="skills">
+                <h2 class="skills__header ">My Skills</h2>
+                <section class="skill ">
+                    <h3 class="skill__header ">Working knowledge</h3>
+                    <ul class="skill__list ">
+                        <li class="skill__listItem ">C#</li>
+                        <li class="skill__listItem ">Unity3D</li>
+                        <li class="skill__listItem ">Xamarin</li>
+                        <li class="skill__listItem ">Visual Studio</li>
+                        <li class="skill__listItem ">GIT</li>
+                        <li class="skill__listItem ">Deploying to Google Play and AppStore</li>
+                    </ul>
+                </section>
+
+                <section class="skill skill-violet">
+                    <h3 class="skill__header ">Know something about</h3>
+                    <ul class="skill__list ">
+                        <li class="skill__listItem ">Java</li>
+                        <li class="skill__listItem ">ObjC</li>
+                        <li class="skill__listItem ">SQLite</li>
+                        <li class="skill__listItem ">C++</li>
+                        <li class="skill__listItem ">Shaders</li>
+                        <li class="skill__listItem ">Frontend (HTML+CSS+JS)</li>
+                    </ul>
+                </section>
+
+                <section class="skill skill-blue">
+                    <h3 class="skill__header ">Want to learn</h3>
+                    <ul class="skill__list ">
+                        <li class="skill__listItem ">Flutter</li>
+                        <li class="skill__listItem ">Kotlin</li>
+                        <li class="skill__listItem ">Azure</li>
+                    </ul>
+                </section>
+            </section>
+
+
+            <section id="projects" class="projects ">
+                <div class="container">
+                    <h2 class="projects__header ">Recent projects</h2>
+                    <p class="projects__headerDesc ">
+                        I started my mobile developer career in 2010. Since then, I've built some projects. Here's the list of of things I've done so far.
+                    </p>
+
+                    <ul class="projects__list projects__list-js">
+                    </ul>
+
+                </div>
+            </section>
+        </section>
+
+        <footer id="contact" class="contact ">
+            <h2 class="contact__header ">Contact me</h2>
+            <p class="contact__text ">
+                I'm open for new projects. If you have one for me - we should talk!
+            </p>
+
+            <div class="contact__list ">
+                <a href="https://github.com/damiansikora85/" class="contact__listItem ">
+                    <img src="../assets/img/githubIconWhite.svg" alt="github" />
+                </a>
+            </div>
+
+            <a class="contact__email " href="mailto:dsikora85@gmail.com ">dsikora85@gmail.com</a>
+        </footer>
+    </main>
+    <script src="js/main.js "></script>
+</body>
+
 </html>
