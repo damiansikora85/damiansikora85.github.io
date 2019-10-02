@@ -1,33 +1,18 @@
 "use strict";
 
-// service worker registration - remove if you're not going to use it
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-        navigator.serviceWorker.register('serviceworker.js').then(function(registration) {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function(err) {
-            // registration failed :(
-            console.log('ServiceWorker registration failed: ', err);
-        });
-    });
-}
-
 // place your code below
 
 
-console.log(`Hello world!`);
+console.log(`Harry. I'm gonna let you in on a little secret. Every day, once a day, give yourself a present. Don't plan it, don't wait for it, just.. let it happen.`);
 
 const projectsList = document.querySelector('.projects__list-js');
-console.log(projectsList);
 
 if (projectsList) {
     fetch('https://api.github.com/users/damiansikora85/repos')
         .then(response => response.json())
         .then(response => {
                 for (const repo of response) {
-                    const { name, html_url, description } = repo;
+                    const { name, homepage, html_url, description } = repo;
                     projectsList.innerHTML +=
                         `<li class="project">
                         <div class="project__container">
@@ -38,8 +23,11 @@ if (projectsList) {
                               }    
                         </div>
                         <section class="project__links">
-                            <a href="${html_url}" class="project__link project__link--demo">Demo</a>
-                            <a href="${html_url}" class="project__link">Code</a>
+                        ${
+                            homepage ? `<a href="${homepage}" class="project__link project__link--demo" target="_blank" rel="nofollow noreferrer">Demo</a>` : ''
+                        }
+                            
+                            <a href="${html_url}" class="project__link" target="_blank" rel="nofollow noreferrer">Code</a>
                         </section>
                 </li>`
             }
