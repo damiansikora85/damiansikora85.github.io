@@ -217,7 +217,9 @@ body {
     &__container {
         padding: 3rem;
     }
-    &__icon {}
+    &__icon {
+        width: 32px;
+    }
     &__title {
         font-style: normal;
         font-weight: 600;
@@ -303,6 +305,12 @@ body {
     }
     &__listItem {
         color: white;
+    }
+    &__icon {
+        width: 32px;
+        margin: 0 0.5rem;
+        color: white;
+        fill: white;
     }
     &__email {
         font-style: normal;
