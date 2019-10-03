@@ -518,6 +518,8 @@ body {
           justify-content: space-between; }
   .project__container {
     padding: 3rem; }
+  .project__icon {
+    width: 32px; }
   .project__title {
     font-style: normal;
     font-weight: 600;
@@ -599,6 +601,11 @@ body {
     margin-top: 1.5rem; }
   .contact__listItem {
     color: white; }
+  .contact__icon {
+    width: 32px;
+    margin: 0 0.5rem;
+    color: white;
+    fill: white; }
   .contact__email {
     font-style: normal;
     font-weight: 500;
